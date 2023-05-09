@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập mảng</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="card w-75 mx-auto">
+        <div class="bg-holder d-none d-lg-block bg-card"></div>
+        <div class="card-body position-relative p-0">
+          <div class="row p-0">
+            <div
+              class="col-12 col-md-4 col-lg-3 col-xl-2 nav flex-column nav-pills nav-tabs"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical"
+            >
+              <button
+                class="nav-link active btn-tabs mb-2"
+                id="v-pills-home-tab"
+                data-toggle="pill"
+                data-target="#exe1"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+              >
+                Bài 1
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-profile-tab"
+                data-toggle="pill"
+                data-target="#exe2"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="false"
+              >
+                Bài 2
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-messages-tab"
+                data-toggle="pill"
+                data-target="#exe3"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-messages"
+                aria-selected="false"
+              >
+                Bài 3
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-settings-tab"
+                data-toggle="pill"
+                data-target="#exe4"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="false"
+              >
+                Bài 4
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-settings-tab"
+                data-toggle="pill"
+                data-target="#exe5"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="false"
+              >
+                Bài 5
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-settings-tab"
+                data-toggle="pill"
+                data-target="#exe6"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="false"
+              >
+                Bài 6
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-settings-tab"
+                data-toggle="pill"
+                data-target="#exe7"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="false"
+              >
+                Bài 7
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-settings-tab"
+                data-toggle="pill"
+                data-target="#exe8"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="false"
+              >
+                Bài 8
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-settings-tab"
+                data-toggle="pill"
+                data-target="#exe9"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="false"
+              >
+                Bài 9
+              </button>
+              <button
+                class="nav-link btn-tabs mb-2"
+                id="v-pills-settings-tab"
+                data-toggle="pill"
+                data-target="#exe10"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="false"
+              >
+                Bài 10
+              </button>
+            </div>
+
+            <div
+              class="col-12 col-md-8 col-lg-9 col-xl-10 tab-content"
+              id="v-pills-tabContent"
+            >
+              <form class="row align-items-center py-3">
+                <div class="col-12 col-lg-6">
+                  <input
+                    type="number"
+                    class="form-control form__input"
+                    id="inputNumber"
+                    placeholder="Nhập vào các số nguyên"
+                  />
+                </div>
+                <div class="col-12 col-lg-6">
+                  <button
+                    type="button"
+                    class="btn btn--primary mb-1 mr-1"
+                    onclick="getNumber()"
+                  >
+                    Thêm số
+                  </button>
+                </div>
+                <div class="alert alert-success mt-3 col-11 mx-auto">
+                  👉<span id="txtArray"></span>
+                </div>
+              </form>
+              <div
+                class="tab-pane fade show active"
+                id="exe1"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab"
+              >
+                <h4 class="card--heading">1️⃣ Tổng số dương</h4>
+                <div class="callout callout-info">
+                  <ol>
+                    <li>Input: Mảng listNumber</li>
+                    <li>Output: Tạo biến tích lũy total = 0</li>
+                    <li>
+                      Process: Duyệt mảng listNumber, kiểm tra phần tử trong
+                      mảng có phải là số dương. Nếu true -> tích lũy phần tử vào
+                      biến total
+                    </li>
+                    <li>Hiển thị kết quả ra giao diện</li>
+                  </ol>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 mb-3">
+                    <button
+                      class="btn btn--primary mb-1 mr-1"
+                      type="button"
+                      onclick="btnSum()"
+                    >
+                      Tính tổng
+                    </button>
+                  </div>
+                  <div class="alert alert-success w-100" role="alert">
+                    👉<span id="txtSum"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="exe2"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <h4 class="card--heading">2️⃣ Đếm số dương</h4>
+                <div class="callout callout-info">
+                  <ol>
+                    <li>Input: Mảng listNumber</li>
+                    <li>Output: Tạo biến tích lũy count = 0</li>
+                    <li>
+                      Process: Duyệt mảng listNumber, kiểm tra phần tử trong
+                      mảng có phải là số dương. Nếu true -> tăng biến count lên
+                      1 đơn vị
+                    </li>
+                    <li>Hiển thị kết quả ra giao diện</li>
+                  </ol>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 mb-3">
+                    <button
+                      class="btn btn--primary mr-1 mb-1"
+                      type="button"
+                      onclick="btnCount()"
+                    >
+                      Đếm số
+                    </button>
+                  </div>
+                  <div class="alert alert-success w-100" role="alert">
+                    👉 <span id="txtCount"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="exe3"
+                role="tabpanel"
+                aria-labelledby="v-pills-messages-tab"
+              >
+                <h4 class="card--heading">3️⃣ Tìm số nhỏ nhất</h4>
+                <div class="callout callout-info">
+                  <ol>
+                    <li>Input: Mảng listNumber</li>
+                    <li>Output: Tạo biến tạm minNumber = listNumber[0]</li>
+                    <li>
+                      Process: Duyệt mảng listNumber, kiểm tra phần tử trong
+                      mảng có nhỏ hơn minNumber hay không. Nếu true -> minNumber
+                      = phần tử đó
+                    </li>
+                    <li>Hiển thị kết quả ra giao diện</li>
+                  </ol>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12">
+                    <button
+                      class="btn btn--primary mb-3"
+                      type="button"
+                      onclick="btnFindMin()"
+                    >
+                      Tìm số nhỏ nhất
+                    </button>
+                  </div>
+                  <div class="alert alert-success w-100" role="alert">
+                    👉 <span id="txtMin"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="exe4"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+              >
+                <h4 class="card--heading">4️⃣ Tìm số dương nhỏ nhất</h4>
+                <div class="callout callout-info">
+                  <ol>
+                    <li>Input: Mảng listNumber</li>
+                    <li>Output: Tạo biến tạm minPosNumber</li>
+                    <li>
+                      Process:
+                      <ul>
+                        <li>
+                          Tạo một mảng mới listPosNumber dùng để chứa các số
+                          dương
+                        </li>
+                        <li>
+                          Dùng vòng lặp để lấy các số dương từ mảng cũ và lưu
+                          vào trong mảng mới listPosNumber
+                        </li>
+                        <li>
+                          Gán giá trị biến tạm minPosNumber = listPosNumber[0]
+                        </li>
+                        <li>
+                          Duyệt mảng listPosNumber, kiểm tra các phần tử trong
+                          mảng có nhỏ hơn minPosNumber không
+                        </li>
+                        <li>Nếu true -> minPosNumber = phần tử đó</li>
+                      </ul>
+                    </li>
+                    <li>Hiển thị kết quả ra giao diện</li>
+                  </ol>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12">
+                    <button
+                      class="btn btn--primary mb-1 mr-1"
+                      type="button"
+                      onclick="btnFindMinPos()"
+                    >
+                      Tìm số dương nhỏ nhất
+                    </button>
+                  </div>
+                  <div class="alert alert-success mt-3 w-100" role="alert">
+                    👉 <span id="txtMinPos"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="exe5"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <h4 class="card--heading">5️⃣ Tìm số chẵn cuối cùng</h4>
+                <div class="callout callout-info">
+                  <ol>
+                    <li>Input: Mảng listNumber</li>
+                    <li>Output: Tạo biến lastEvenNumber</li>
+                    <li>
+                      Process:
+                      <ul>
+                        <li>
+                          Tạo mảng mới listEvenNumber dùng để chứa các số chẵn
+                        </li>
+                        <li>
+                          Dùng vòng lặp để lấy các số chẵn từ mảng cũ vào mảng
+                          mới listEvenNumber
+                        </li>
+                        <li>
+                          Gán giá trị cho biến lastEvenNumber =
+                          listEvenNumber[listEvenNumber.length - 1]
+                        </li>
+                      </ul>
+                    </li>
+                    <li>Hiển thị kết quả ra giao diện</li>
+                  </ol>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 mb-3">
+                    <button
+                      class="btn btn--primary mr-1 mb-1"
+                      type="button"
+                      onclick="btnFindEven()"
+                    >
+                      Tìm số chẵn
+                    </button>
+                  </div>
+                  <div class="alert alert-success w-100" role="alert">
+                    👉 <span id="txtEven"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="exe6"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <h4 class="card--heading">6️⃣ Đổi chỗ</h4>
+                <div class="callout callout-info">
+                  <ol>
+                    <li>Input: Mảng listNumber</li>
+                    <li>Dom tới 2 thẻ input để lấy giá trị vị trí</li>
+                    <li>
+                      Process:
+                      <ul>
+                        <li>Tạo biến tạm</li>
+                        <li>Gán giá trị của phần tử ở vị trí 1 vào biến tạm</li>
+                        <li>Gán giá trị của phần tử ở vị trí 2 vào vị trí 1</li>
+                        <li>Gán giá trị biến tạm vào vị trí 2</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Hiện kết quả ra giao diện, output là mảng listNumber sau
+                      khi thay đổi
+                    </li>
+                  </ol>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 col-lg-6">
+                    <input
+                      type="number"
+                      class="form-control form-input"
+                      id="inputIndex1"
+                      placeholder="Nhập số vị trí 1"
+                    />
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <input
+                      type="number"
+                      class="form-control form-input"
+                      id="inputIndex2"
+                      placeholder="Nhập số vị trí 2"
+                    />
+                  </div>
+                  <div class="col-12 my-3">
+                    <button
+                      class="btn btn--primary mr-1 mb-1"
+                      type="button"
+                      onclick="btnChangePos()"
+                    >
+                      Đổi chỗ
+                    </button>
+                  </div>
+                  <div class="alert alert-success w-100" role="alert">
+                    👉 <span id="txtChangePos"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="exe7"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <h4 class="card--heading">7️⃣ Sắp xếp tăng dần</h4>
+                <div class="callout callout-info">
+                  <ol>
+                    <li>Input: Mảng listNumber</li>
+                    <li>
+                      Process:
+                      <ul>
+                        <li>
+                          Dùng 2 vòng lặp lồng nhau để duyệt và so sánh các phần
+                          tử
+                        </li>
+                        <li>
+                          Nếu listNumber[i] > listNumber[j] thì ta hoán đổi vị
+                          trí 2 phần tử cho nhau. Áp dụng biến tạm như bài Bài 6
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Hiện kết quả ra giao diện, output là mảng listNumber sau
+                      khi thay đổi
+                    </li>
+                  </ol>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 mb-3">
+                    <button
+                      class="btn btn--primary mr-1 mb-1"
+                      type="button"
+                      onclick="btnIncrease()"
+                    >
+                      Sắp xếp
+                    </button>
+                  </div>
+                  <div class="alert alert-success w-100" role="alert">
+                    👉 <span id="txtIncrease"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="exe8"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <h4 class="card--heading">8️⃣ Tìm số nguyên tố đầu tiên</h4>
+                <div class="callout callout-info">
+                  <ol>
+                    <li>
+                      Tạo hàm kiểm tra 1 số có phải số nguyên tố hay không
+                    </li>
+                    <li>Output: Tạo biếm prime</li>
+                    <li>
+                      Process: Duyệt mảng để kiểm tra từng phần tử có phải số
+                      nguyên tố không, nếu true --> gán giá trị phần tử đó vào
+                      biến prime, break thoát ra khỏi vòng lặp để không duyệt
+                      những phần tử tiếp theo trong mảng
+                    </li>
+                    <li>Hiển thị kết quả ra giao diện</li>
+                  </ol>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 mb-3">
+                    <button
+                      class="btn btn--primary mr-1 mb-1"
+                      type="button"
+                      onclick="btnFindPrime()"
+                    >
+                      Tìm số nguyên tố
+                    </button>
+                  </div>
+                  <div class="alert alert-success w-100" role="alert">
+                    👉 <span id="txtPrime"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="exe9"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <h4 class="card--heading">9️⃣ Đếm số nguyên</h4>
+                <div class="callout callout-info">
+                  <ol>
+                    <li>Output: Khai báo mảng listFloat</li>
+                    <li>
+                      Tạo hàm btnGetFloat() lấy số thực bỏ vào mảng
+                      <ul>
+                        <li>
+                          Input: Dom tới thẻ input#inputFloat để lấy value
+                        </li>
+                        <li>Process: Thêm phần tử vào mảng listFloat</li>
+                        <li>Hiện thị ra giao diện</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Tạo hàm btnCountInt() đếm số nguyên
+                      <ul>
+                        <li>Input: Mảng listFloat</li>
+                        <li>Output: Tạo biến đếm số nguyên countInt</li>
+                        <li>
+                          Process: Duyệt mảng listFloat, kiểm tra phần tử trong
+                          mảng có phải là số nguyên, nếu true -> tăng biến
+                          countInt lên 1 đơn vị
+                        </li>
+                        <li>Hiện thị kết quả ra giao diện</li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 col-lg-6">
+                    <input
+                      type="number"
+                      class="form-control form-input"
+                      id="inputFloat"
+                      placeholder="Nhập vào các số thực"
+                    />
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <button
+                      type="button"
+                      class="btn btn--primary mr-1 mb-1"
+                      onclick="btnGetFloat()"
+                    >
+                      Thêm số
+                    </button>
+                  </div>
+                  <div class="alert alert-success w-100 mt-3" role="alert">
+                    👉 <span id="txtFloat"></span>
+                  </div>
+                  <div class="col-12 col-lg-6 mb-3">
+                    <button
+                      class="btn btn--primary mr-1 mb-1"
+                      type="button"
+                      onclick="btnCountInt()"
+                    >
+                      Đếm số nguyên
+                    </button>
+                  </div>
+                  <div class="alert alert-success w-100" role="alert">
+                    👉 <span id="txtInt"></span>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="exe10"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <h4 class="card--heading">
+                  🔟 So sánh số lượng số âm và dương
+                </h4>
+                <div class="callout callout-info">
+                  <ol>
+                    <li>Input: Mảng listNumber</li>
+                    <li>Output: Tạo 2 biến đếm số dương và số âm</li>
+                    <li>
+                      Process: Duyệt mảng listNumber, kiểm tra phần tử trong
+                      mảng là số dương hay số âm, nếu số dương thì tăng biến
+                      posNumber lên 1 đơn vị, nếu số âm thì tăng biến negNumber
+                      lên 1 đơn vị
+                    </li>
+                    <li>Hiển thị kết quả ra giao diện</li>
+                  </ol>
+                </div>
+                <form class="row gy-3 align-items-center px-2">
+                  <div class="col-12 mb-3">
+                    <button
+                      class="btn btn--primary mr-1 mb-1"
+                      type="button"
+                      onclick="btnCompare()"
+                    >
+                      So sánh
+                    </button>
+                  </div>
+                  <div class="alert alert-success w-100" role="alert">
+                    👉 <span id="txtCompare"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
